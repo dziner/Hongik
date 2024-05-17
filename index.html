@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // JavaScript function to get URL parameters
+        function getParameterByName(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Get the 'gb' parameter or default to 'ko'
+        var gb = getParameterByName('gb') || 'ko';
+
+        // Redirect to the new location
+        window.location.href = '/Hongik_/Intro/index.html?gb=' + gb + '&code=INT';
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
