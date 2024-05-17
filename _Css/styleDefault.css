@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*반응형 추가*/
+i{font-style:normal}
+.break{display:block;} 
+.block{display:block}
+	@media all and (max-width:480px) {
+		.plump{display:block}
+		.block{display:block}
+	}
+	@media all and (max-width:1024px) {
+		.m-none{display:none}
+		.break{display:inline}
+	}
+
+/* 스킵네비게이션 */
+#skipNavi {height:0;}
+#skipNavi .skipLink {position:absolute;top:-1000px;left:-1000px;overflow:hidden;z-index:5000;}
+#skipNavi .skipLink:focus, #skipNavi .skipLink:active {top:0;left:0;padding:10px 20px;background:#1e64ba;color:#fff;}
+
+/* 컨텐츠 타이틀*/
+.u-tit01 {font-size:27px;font-weight:800;color:#333; padding-top:0px;line-height:120%;margin-bottom:20px;letter-spacing:-0.01em; color:#222} 
+.u-tit02 {font-size:16px;font-weight:600;color:#002882;padding-left:0px;padding-top:18px;line-height:120%;margin-bottom:10px;}
+	
+	@media all and (max-width:1000px) {
+		.u-tit01{font-size:22px;}
+	}
+
+/* ie9 업그레이드 안내 */
+.lowIE-update {position:fixed;top:0;left:0;z-index:7000;width:100%;height:100%;}
+.lowIE-update .update-cont {position:relative;margin:10% auto 0;width:418px;height:148px;border:1px solid #000;background:#ff890b;color:#000;padding:50px 50px 20px 20px;text-align:center;z-index:7100}
+.lowIE-update .update-cont p {padding-left:50px;line-height:1.2;text-align:left;}
+.lowIE-update .update-cont .tit {padding-bottom:5px;background:url(/psedu/Html/cmmImg/Content/ico-upnotice.png) no-repeat 0 0;}
+.lowIE-update .update-cont .txt {margin-bottom:35px;}
+.lowIE-update .update-cont .btn-upgrade {color:#000;display:block;}
+.lowIE-update .update-cont .btn-upgrade .atxt {border-bottom:1px solid #333; padding-bottom:5px; font-weight:600}
+.lowIE-update .update-cont .btn-upgrade span.ico {display:inline-block;*display:inline;*zoom:1;width:15px;height:12px;vertical-align:middle;background:url(/psedu/Html/cmmImg/Content/ico-uparr.gif) no-repeat 0 0;padding-left:9px;}
+.lowIE-update .update-cont .chk-uclose {display:block;text-align:right;margin-top:15px;}
+.lowIE-update button {position:absolute;bottom:0;right:0;width:40px;height:40px;background:#000 url(/psedu/Html/cmmImg/Content/btn-upclose.gif) no-repeat 50% 50%;border:0;}
+
+
+/*라인, 추가는 전체 공용으로*/
+.u-line {border-width:0px 0px 0px 0px;display:block;height:1px;overflow:hidden;background:#888;}
+
+
